@@ -1,4 +1,5 @@
 // Algoritmo manejo de ciclos y funciones flecha
+// 
 
 let vidaMiocic = 100;
 let vidaGustafson = 100;
@@ -8,7 +9,7 @@ let maxGolpe = 10;
 
 let ambosEnPie = () => {return vidaGustafson >0 && vidaMiocic >0};
 let calcularGolpe =() => {return Math.round(Math.random() * (maxGolpe-minGolpe))+minGolpe};
-let miocicEnPie = () => {return vidaMiocic>0};
+let miocicEnPie = () => vidaMiocic>0; // Se puede quitar {} y return
 
 let round = 1;
 
@@ -28,7 +29,7 @@ while(ambosEnPie()){
     else{
         //ataca Gustafson
         console.log(`Gustafson ataca a Miocic con un golpe de ${golpeGustafson}`);
-        vidaMiocic -=golpeGustafson;
+        vidaMiocic -=golpeGustafson;  // vida = vida - golpe
         console.log(`Miocic queda con ${vidaMiocic} de vida`);
         
     }
